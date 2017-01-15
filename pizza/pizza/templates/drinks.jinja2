@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 {% extends "base.jinja2" %}
-			{% block data %}
-	<script>
+{% block page %}
+<script>
 var priceList = {
 	"001" : {"id" : "001", "subid" : {}, "name" : "Пицца-ролл", "price" : "99"},
 	"002" : {"id" : "002", "subid" : {}, "name" : "Картофельные дольки", "price" : "124"},
@@ -19,46 +20,6 @@ var priceList = {
 	"015" : {"id" : "015", "subid" : {}, "name" : "Сок Добрый", "price" : "119"}
 
 	};
-</script>
-	<div class="cart">
-<div class="price"><a href="#" id="basketwidjet" onclick="cart.showWinow('bcontainer', 1)"></a></div>
-
-<div style="text-align: center"><a href="#!" onclick="cart.clearBasket()">Очистить корзину</a></div>
-
-</div><!---Форма для магазина-------------------------------->
-<div id="order" class="popup">
-<a href="#" onclick="cart.closeWindow('order', 0)" style="float:right">[закрыть]</a>
-<h4>Введите ваши контактные данные</h4>
-
-<form id="formToSend">
-<input id="fio" type="text" placeholder="Ваши фамилия и имя"  class="" />
-<input id="city" type="text" placeholder="Город"  class="text-input"/>
-<input id="phone" type="text" placeholder="Контактный телефон" class="text-input"/>
-<input id="email" type="text" placeholder="Электронная почта" class="" />
-<br>
-<textarea id="question" placeholder="Адрес"></textarea>
-</form>
-<button onclick="cart.sendOrder('formToSend,overflw,bsum');" href="#">Отправить заказ</button>
-</div>
-<!----------------------------------------------------->
-
-<script>
-var cart;
-var config;
-var wiNumInputPrefID;
-/* WI-GLOBAL-VARS */
-$(document).ready(function(){
-    cart = new WICard("cart");
-    config = {'clearAfterSend':true, 'showAfterAdd':false};
-
-    cart.init("basketwidjet", config);
-    /* WI-MODULES */
-
-
-});
-document.addEventListener('visibilitychange', function(e) {
-cart.init("basketwidjet", config);
-}, false);
 </script>
 		<div class="table">
 			<table>
@@ -99,5 +60,4 @@ cart.init("basketwidjet", config);
 				</tr>
 			</table>
 		</div>
-
-			{% endblock %}
+{% endblock %}

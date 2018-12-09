@@ -1,5 +1,5 @@
 ﻿body{
-	background-image: url("http://i.imgur.com/iMHfeTU.jpg");
+	
 	background-size: 1369px 886px;
 	background-attachment:fixed;
 	background-position: left 25%;
@@ -139,6 +139,14 @@ td{
 	color:red;
 	font-size:20px;
 }
+header{
+	background:url("http://i.imgur.com/iMHfeTU.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100px;
+  }
 /*Для всех заголовков*/
 h1{
 	color: rgba(255, 117, 25, 0.9);
